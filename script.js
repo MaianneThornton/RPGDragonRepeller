@@ -42,6 +42,11 @@ function goStore() {
 
     text.innerText = "You enter the store.";
 }
+
+function update(location){
+    
+}
+
 function goCave() {
     console.log('Going to cave.');
 }
@@ -56,3 +61,4 @@ function buyHealth(){
 function buyWeapon(){
 
 }
+
