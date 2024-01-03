@@ -24,3 +24,6 @@ button3.onclick = fightDragon;
 function goStore(){
     console.log('Going to store.');
 }
+function goCave(){
+    console.log('Going to cave.');
+}
