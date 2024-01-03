@@ -53,12 +53,12 @@ function update(location) {
 }
 
 function goTown() {
-   update(locations[0]);
+    update(locations[0]);
 }
 
 function goStore() {
     update(locations[1]);
-   
+
 }
 
 
@@ -77,10 +77,10 @@ function buyWeapon() {
 
 }
 
-function fightSlime(){
+function fightSlime() {
 
 }
 
-function fightBeast(){
+function fightBeast() {
 
 }
