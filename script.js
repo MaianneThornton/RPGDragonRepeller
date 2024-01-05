@@ -106,6 +106,9 @@ function buyWeapon() {
   if (gold >= 30) {
     gold -= 30;
     currentWeapon++;
+    const goldText = document.querySelector('#goldText');
+    goldText.innerText = gold;
+    text.innerText = 'You now have a new weapon.';
   }
 }
 
