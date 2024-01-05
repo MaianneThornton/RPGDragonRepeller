@@ -147,10 +147,20 @@ function sellWeapon() {
     text.innerText = "Don't sell your only weapon!";
   }
 }
-function fightDragon() {
-  console.log('Fighting dragon.');
+
+function goFight() { };
+
+function fightSlime() {
+  fighting = 0;
+  goFight();
 }
 
-function fightSlime() { }
+function fightBeast() {
+  fighting = 1;
+  goFight();
+}
 
-function fightBeast() { }
+function fightDragon() {
+  fighting = 2;
+  goFight();
+}
