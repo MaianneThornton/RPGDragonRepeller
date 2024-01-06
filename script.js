@@ -200,6 +200,7 @@ function attack() {
   if (health <= 0) {
     lose();
   } else if (monsterHealth <= 0) {
+    // ternary reads if fighting equals 2(dragon) then call winGame function, else call defeatMonster function
     fighting === 2 ? winGame() : defeatMonster();
   }
 };
@@ -208,6 +209,9 @@ function dodge() {
 };
 function lose() {
   update(locations[5]);
+};
+function winGame() {
+  update(locations[6])
 };
 function defeatMonster() {
   gold += Math.floor(monsters[fighting].level * 6.7);
