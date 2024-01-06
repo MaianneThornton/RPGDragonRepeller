@@ -210,7 +210,12 @@ function attack() {
     fighting === 2 ? winGame() : defeatMonster();
   }
 };
-function getMonsterAttackValue(level) { };
+function getMonsterAttackValue(level) {
+  //set monster's attack to five times their level minus a random number between 0 and the player's xp
+  const hit = (level * 5) - (Math.floor(Math.random() * xp));
+  //returns hit if hit is greater than 0, or returns 0 if it is not.
+  return hit > 0 ? hit : 0;
+ };
 function dodge() {
   text.innerText = "You dodge the attack from the " + monsters[fighting].name + ".";
 };
