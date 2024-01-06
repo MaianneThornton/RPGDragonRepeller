@@ -90,6 +90,12 @@ const locations = [
     'button text': ["REPLAY?", "REPLAY?", "REPLAY?"],
     'button functions': [restart, restart, restart],
     text: "You die. ☠️"
+  },
+  {
+    name: "win",
+    'button text': ["REPLAY?", "REPLAY?", "REPLAY?"],
+    'button functions': [restart, restart, restart],
+    text: "You defeat the dragon! YOU WIN THE GAME! 🎉"
   }
 ];
 
