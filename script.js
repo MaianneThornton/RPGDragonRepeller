@@ -213,6 +213,10 @@ function attack() {
     // ternary reads if fighting equals 2(dragon) then call winGame function, else call defeatMonster function
     fighting === 2 ? winGame() : defeatMonster();
   }
+  // adds the probability that the users weapon breaks. .pop() will remove the weapon from the inventory, and return it so we can use it to concatenate to the string displaying in the text
+  if (Math.random() <= .1) {
+    text.innerText += " Your " + inventory.pop() + " breaks.";
+  }
 };
 function getMonsterAttackValue(level) {
   //set monster's attack to five times their level minus a random number between 0 and the player's xp
