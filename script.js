@@ -221,7 +221,8 @@ function getMonsterAttackValue(level) {
   return hit > 0 ? hit : 0;
 };
 function isMonsterHit() {
-  return Math.random() > .2
+  // Player should hit if either Math.random() > .2 or if the player's health is less than 20.
+  return Math.random() > .2 || health < 20;
 };
 function dodge() {
   text.innerText = "You dodge the attack from the " + monsters[fighting].name + ".";
