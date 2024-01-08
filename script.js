@@ -216,6 +216,7 @@ function attack() {
   // adds the probability that the users weapon breaks. .pop() will remove the weapon from the inventory, and return it so we can use it to concatenate to the string displaying in the text
   if (Math.random() <= .1) {
     text.innerText += " Your " + inventory.pop() + " breaks.";
+    currentWeapon--;
   }
 };
 function getMonsterAttackValue(level) {
