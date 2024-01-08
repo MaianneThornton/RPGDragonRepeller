@@ -1,4 +1,4 @@
-# freeCodeCamp - RPG - Dragon Repeller
+# freeCodeCamp JavaScript Algorithms and Data Structures - RPG Dragon Repeller
 
 This is a project in the [Learn Basic JavaScript Algorithms and Data Structures](https://www.freecodecamp.org/news/learn-javascript-with-new-data-structures-and-algorithms-certification-projects/).
 
