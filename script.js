@@ -200,7 +200,10 @@ function attack() {
   text.innerText = "The " + monsters[fighting].name + " attacks.";
   text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
   health -= getMonsterAttackValue(monsters[fighting].level);
-  monsterHealth = monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
+  if (isMonsterHit()) {
+    monsterHealth = monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1;
+  }
+
   healthText.innerText = health;
   monsterHealthText.innerText = monsterHealth;
   if (health <= 0) {
@@ -215,7 +218,7 @@ function getMonsterAttackValue(level) {
   const hit = (level * 5) - (Math.floor(Math.random() * xp));
   //returns hit if hit is greater than 0, or returns 0 if it is not.
   return hit > 0 ? hit : 0;
- };
+};
 function dodge() {
   text.innerText = "You dodge the attack from the " + monsters[fighting].name + ".";
 };
