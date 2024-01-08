@@ -213,8 +213,8 @@ function attack() {
     // ternary reads if fighting equals 2(dragon) then call winGame function, else call defeatMonster function
     fighting === 2 ? winGame() : defeatMonster();
   }
-  // adds the probability that the users weapon breaks. .pop() will remove the weapon from the inventory, and return it so we can use it to concatenate to the string displaying in the text
-  if (Math.random() <= .1) {
+  // adds the probability that the users weapon breaks only if user has more than 1 weapon. .pop() will remove the weapon from the inventory, and return it so we can use it to concatenate to the string displaying in the text
+  if (Math.random() <= .1 && inventory.length !== 1) {
     text.innerText += " Your " + inventory.pop() + " breaks.";
     currentWeapon--;
   }
@@ -255,4 +255,7 @@ function restart() {
   healthText.innerText = health;
   goldText.innerText = gold;
   goTown();
+};
+function easterEgg() {
+  update(locations[7])
 };
